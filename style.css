@@ -1,0 +1,168 @@
+/*
+Theme Name: SakuraCloud Maintenance
+Theme URI: https://sakuracloud.id
+Author: SakuraCloudID
+Author URI: https://sakuracloud.id
+Description: A modern, 3D animated maintenance mode theme with DDoS attack visualization
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sakuracloud-maintenance
+*/
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@500;600&display=swap');
+
+/* Reset & Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Container Styles */
+.maintenance-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    z-index: 1;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Logo Styles */
+.logo.glassmorphism {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Glowing Banner */
+.glowing-banner {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ff0000;
+    text-align: center;
+    margin: 2rem 0;
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+    50% { text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000; }
+    100% { text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000; }
+}
+
+/* 3D Warning Icon Container */
+#warning-icon-3d {
+    width: 300px;
+    height: 300px;
+    margin: 2rem auto;
+}
+
+/* Status Message */
+.status-message {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 2rem 0;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Loader Animation */
+.loader {
+    border: 8px solid rgba(255, 255, 255, 0.1);
+    border-top: 8px solid #00ffff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin: 2rem auto;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Support Info */
+.support-info {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.support-info a {
+    color: #00ffff;
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+}
+
+.support-info a:hover {
+    text-shadow: 0 0 10px #00ffff;
+}
+
+/* Particle Background */
+#particle-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .glowing-banner {
+        font-size: 1.5rem;
+    }
+
+    #warning-icon-3d {
+        width: 200px;
+        height: 200px;
+    }
+
+    .status-message {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .maintenance-container {
+        padding: 1rem;
+    }
+
+    .glowing-banner {
+        font-size: 1.25rem;
+    }
+
+    #warning-icon-3d {
+        width: 150px;
+        height: 150px;
+    }
+}
